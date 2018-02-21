@@ -1,4 +1,4 @@
 node_modules
-.slintrc
+.eslintrc
 package-lock.json
 package.json
