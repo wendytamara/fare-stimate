@@ -13,29 +13,24 @@ function initGoogleAPI() {
     let pointOfArrival = autocomplete2.getPlaces()[0];
     let latitudStart = startPoint.geometry.location.lat();
     let longitudStart = startPoint.geometry.location.lng();
-
     let latitudEnd = pointOfArrival.geometry.location.lat();
     let longitudEnd = pointOfArrival.geometry.location.lng();
-
-
     $.ajax({
       url: `https://api.uber.com/v1.2/estimates/price?start_latitude=${latitudStart}&start_longitude=${longitudStart}&end_latitude=${latitudEnd}&end_longitude=${longitudEnd}`,
       headers: {
-    		        'Authorization': 'Token ' + 'AFoFvmU6KV2cQy42a_sw_jI_-XMirLA3DTz3wnW0',
-    		        'Accept-Language': 'en_US',
-    		        'Content-Type': 'application/json'
-    		       },
-    	success: function(response) {
-
+        'Authorization': 'Token ' + 'AFoFvmU6KV2cQy42a_sw_jI_-XMirLA3DTz3wnW0',
+        'Accept-Language': 'en_US',
+        'Content-Type': 'application/json'
+      },
+      success: function(response) {
         const data = response.prices;
         $containerPrice.append('<h4>Tus Opciones:</h4>');
         for (var i = 0; i < data.length; i++) {
-          let output = `  <p><strong>${data[i].display_name}</strong> ${' '}<span>${data[i].low_estimate} - ${data[i].high_estimate}</span> <span> S/.</span></p>
-
+          let output = `  <p><strong>${data[i].display_name}</strong> ${' '}<span> <span> S/.</span>${data[i].low_estimate} -  <span> S/.</span> ${data[i].high_estimate}</span></p>
            `;
           $containerPrice.append(output);
         }
-	    }
+      }
     });
   });
 }
