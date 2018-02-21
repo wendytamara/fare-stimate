@@ -1,2 +1,4 @@
 node_modules
 .slintrc
+package-lock.json
+package.json
