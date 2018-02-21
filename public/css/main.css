@@ -1,0 +1,69 @@
+/*.driver{
+  background-color: rgba(0,0,0,0.58);
+  height: -webkit-fill-available;
+  padding: 80px 40px;
+}*/
+
+.position{
+  position: relative;
+  top: 170px;
+}
+
+.position-icons{
+  position: relative;
+  top: 300px;
+}
+
+/*.modal-class{
+  background-color: #000;
+}*/
+
+.color-box{
+  background-color: #a9a9a9;
+}
+
+.border-white {
+    border: 2px #E07878 solid;
+    height: -webkit-fill-available;
+    width: 80%;
+}
+
+.hight{
+  height: 400px;
+}
+
+/*.bg-modal{
+  background-color: #08ac9d;
+}*/
+
+.modal-b {
+  padding-top: 15px;
+  border-radius: 15px;
+}
+
+.form-opt {
+  color: #000;
+  font-weight: 700;
+}
+
+#map {
+  height: 100%;
+  width: 50%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.height-map {
+  height: 350px;
+}
+
+
+@media (max-width:768px) {
+  #map {
+    width: 80%;
+  }
+}
