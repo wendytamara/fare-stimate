@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,14 @@
   <title>Document</title>
 </head>
 <body>
-
-
   <section id="viaja" class="container-fluid color-found section-container">
-  <article class="row height-map">
-    <div class="col-xs-12 col-sm-5">
+    <article class="row height-map">
+      <div class="col-xs-12 col-sm-5">
         <!-- <button id="encuentrame" class="btn btn-default center-block boton">!CONOCE TU UBICACION!</button> -->
-      <h2><strong>Tarifas</strong></h2>
-
-      <h3>Consulta las tarifas aqui</h3>
-
+        <h2>
+          <strong>Tarifas</strong>
+        </h2>
+        <h3>Consulta las tarifas aqui</h3>
         <div class="section-inputs">
           <div class="input-group">
             <img src="assets/images/shape.png" alt="">
@@ -29,29 +28,23 @@
             <input id="end" type="text" class="form-control camp-text" placeholder="Ingrese su destino">
           </div>
         </div>
-      <button id="search" class="btn btn-default center-block boton">!TRAZAR RUTA!</button>
-      <div class="visible-xs"> 11 </div>
-    </div>
-
-    <div id="map" class="col-xs-10 col-xs-offset-1 col-sm-5 img-ruta-movil">
-    </div>
-
-  <div class="container">
-    <div class="row">
-      <div id="container-price">
+        <button id="search" class="btn btn-default center-block boton">!TRAZAR RUTA!</button>
+        <div class="visible-xs"> 11 </div>
       </div>
-
-    </div>
-  </div>
-
-  </article>
-</section>
-
-<script type="text/javascript" src="vendors/bootstrap/js/jquery.js">
-</script>
-<script async defer
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVwz3mdh_9SgBU0vA6qFqD9eiVnhroNYE&callback=initMap&libraries=places,geometry">
-   </script>
+      <div id="map" class="col-xs-10 col-xs-offset-1 col-sm-5 img-ruta-movil">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div id="container-price">
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <script type="text/javascript" src="vendors/bootstrap/js/jquery.js">
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVwz3mdh_9SgBU0vA6qFqD9eiVnhroNYE&callback=initMap&libraries=places,geometry">
+  </script>
   <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js">
   </script>
   <script type="text/javascript" src="js/app.js">
@@ -60,4 +53,5 @@
   </script>
 
 </body>
+
 </html>
