@@ -49,6 +49,7 @@
 #map {
   height: 100%;
   width: 50%;
+  margin-top: 20px;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -60,10 +61,19 @@ html, body {
 .height-map {
   height: 350px;
 }
-
-
 @media (max-width:768px) {
   #map {
     width: 80%;
+   
   }
+}
+.logo{
+  height: 20px;
+  
+}
+.title{
+  font-size: 32px;
+}
+#end{
+  margin-bottom: 20px;
 }
