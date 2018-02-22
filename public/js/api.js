@@ -9,6 +9,7 @@ function initGoogleAPI() {
   let autocomplete2 = new google.maps.places.SearchBox(inputEnd);
 
   document.getElementById('search').addEventListener('click', function() {
+    $containerPrice.empty();
     let startPoint = autocomplete.getPlaces()[0];
     let pointOfArrival = autocomplete2.getPlaces()[0];
     let latitudStart = startPoint.geometry.location.lat();
@@ -24,11 +25,23 @@ function initGoogleAPI() {
       },
       success: function(response) {
         const data = response.prices;
-        $containerPrice.append('<h4>Tus Opciones:</h4>');
-        for (var i = 0; i < data.length; i++) {
-          let output = `  <p><strong>${data[i].display_name}</strong> ${' '}<span> <span> S/.</span>${data[i].low_estimate} -  <span> S/.</span> ${data[i].high_estimate}</span></p>
-           `;
-          $containerPrice.append(output);
+        $containerPrice.append(`<tr>
+            <th>SERVICIO</th>
+            <th>PRECIO(aprox.)</th>
+            <th>Km</th>
+             <th>Tiempo</th>
+          </tr>`);
+
+          for (var i = 0; i < data.length; i++) {
+            let output = `
+            <tr>
+              <th>${data[i].display_name} </th>
+              <td> S/. ${data[i].low_estimate} - ${data[i].high_estimate} </td>
+              <td>${((data[i].distance)*1.609).toFixed(1)}km</td>
+               <td>${(data[i].duration)/60} min.</td>
+            </tr>
+            `;
+            $containerPrice.append(output);
         }
       }
     });

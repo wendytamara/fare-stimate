@@ -17,7 +17,7 @@ var initMap = () => {
   new google.maps.places.Autocomplete(inputEnd);
   let directionsService = new google.maps.DirectionsService;
   let directionsDisplay = new google.maps.DirectionsRenderer;
-  
+
   initGoogleAPI();
 
   let calculateAndDisplayRoute = (directionsService, directionsDisplay) =>{
@@ -29,7 +29,6 @@ var initMap = () => {
     (response, status)=>{
       if (status === 'OK') {
         directionsDisplay.setDirections(response);
-        console.log(response);
       } else {
         window.alert('no encontramos la ruta');
       }

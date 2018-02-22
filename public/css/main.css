@@ -1,8 +1,3 @@
-/*.driver{
-  background-color: rgba(0,0,0,0.58);
-  height: -webkit-fill-available;
-  padding: 80px 40px;
-}*/
 
 .position{
   position: relative;
@@ -61,15 +56,32 @@ html, body {
 .height-map {
   height: 350px;
 }
+
+th {
+  line-height: 2.5;
+}
+
+
+.box {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 1em;
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+
+
 @media (max-width:768px) {
   #map {
     width: 80%;
-   
+
   }
 }
 .logo{
   height: 20px;
-  
+
 }
 .title{
   font-size: 32px;
