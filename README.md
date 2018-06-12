@@ -9,9 +9,13 @@
 
 ##  **OBJETIVO**
 
+
+
 Crear una aplicación que permita trazar una ruta y saber la tárifa estimada.
 
 ## **Desarrollo**
+
+![texto cualquiera por si no carga la imagen](public/assets/images/fire-stimate.png)
 
 Para el desarrollo de nuestra aplicación se utilizó la documentación del API de Uber.
 
